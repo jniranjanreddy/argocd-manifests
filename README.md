@@ -104,8 +104,7 @@ kubectl get pods -n argocd -w
 kubectl port-forward svc/argocd-server -n argocd 8080:443
 
 # Get the auto-generated initial admin password
-kubectl -n argocd get secret argocd-initial-admin-secret \
-  -o jsonpath="{.data.password}" | base64 -d; echo
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 
 # Log in via CLI
 argocd login localhost:8080 --username admin --password <password-from-above> --insecure
