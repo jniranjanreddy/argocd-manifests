@@ -10,6 +10,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: angular-demo
+  namespace: apps
   labels:
     app: angular-demo
 spec:
@@ -24,7 +25,7 @@ spec:
     spec:
       containers:
         - name: angular-demo
-          image: jniranjanreddy/angular-demo:latest
+          image: nirulabs/angular-demo:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
