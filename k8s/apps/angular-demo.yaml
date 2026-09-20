@@ -10,6 +10,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: angular-demo
+  namespace: apps
   labels:
     app: angular-demo
 spec:
