@@ -10,6 +10,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fastapi-demo
+  namespace: apps
   labels:
     app: fastapi-demo
 spec:
@@ -24,7 +25,7 @@ spec:
     spec:
       containers:
         - name: fastapi-demo
-          image: jniranjanreddy/fastapi-demo:latest
+          image: nirulabs/fastapi-demo:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
