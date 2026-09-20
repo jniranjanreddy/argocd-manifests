@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: fastapi-demo
-          image: nirulabs/fastapi-demo:latest
+          image: nirulabs/fastapi-demo:v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
